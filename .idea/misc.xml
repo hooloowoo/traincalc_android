@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.4324074074074074" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_cant.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_clearance.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_curve_radius.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_dcc_colors.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_gauge.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_guiding_rails.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_overhead.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_rail_height.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_track_distance.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/fragment_trackbed.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.238855116514691" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.37142857142857144" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

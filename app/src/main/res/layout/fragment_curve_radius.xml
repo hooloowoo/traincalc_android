@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.CurveRadiusFragment">
+
+
+        <TextView
+            android:id="@+id/txtNemGauge"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/btnScale" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_nem_gauge"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNemGauge"
+            app:layout_constraintStart_toStartOf="@+id/tvGaugeScale" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="18dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+
+        <TextView
+            android:id="@+id/tvGaugeScale"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_scale"
+            app:layout_constraintBottom_toBottomOf="@+id/btnScale"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <eu.highball.traincalc.ui.ScaleSelectorButton
+            android:id="@+id/btnScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/txtNemGauge"
+            app:layout_constraintTop_toTopOf="parent"
+            app:name="--"
+            app:norm="---"
+            app:scale="1:--" />
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblComment">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="210dp"
+                android:layout_height="280dp"
+                android:contentDescription="Gauge Image"
+                android:src="@drawable/img_curve_radius"
+                app:srcCompat="@drawable/img_curve_radius" />
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/lblGuidingRailsMinDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_minimum_radius"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/txtMinimumRadius"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNemGauge"
+            app:layout_constraintTop_toTopOf="@+id/lblGuidingRailsMinDistance" />
+
+        <TextView
+            android:id="@+id/lblGuidingRailsMinDistanceMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/lblGuidingRailsMinDistance" />
+
+
+        <TextView
+            android:id="@+id/lblRecMinRadAtStations"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_curve_at_stations"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/txtRecMinRadAtStations"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtMinimumRadius"
+            app:layout_constraintTop_toTopOf="@+id/lblRecMinRadAtStations" />
+
+        <TextView
+            android:id="@+id/lblRecMinRadAtStationsMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lblGuidingRailsMinDistanceMm"
+            app:layout_constraintTop_toTopOf="@+id/txtRecMinRadAtStations" />
+
+
+        <TextView
+            android:id="@+id/lblRecMinRadOnBranchLines"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_curve_branch_lines"
+            app:layout_constraintStart_toStartOf="@+id/lblRecMinRadAtStations"
+            app:layout_constraintTop_toBottomOf="@+id/lblRecMinRadAtStations" />
+
+        <TextView
+            android:id="@+id/txtRecMinRadOnBranchLines"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRecMinRadAtStations"
+            app:layout_constraintTop_toTopOf="@+id/lblRecMinRadOnBranchLines" />
+
+
+        <TextView
+            android:id="@+id/lblRecMinOnBranchLinesMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblRecMinRadAtStationsMm"
+            app:layout_constraintTop_toTopOf="@+id/txtRecMinRadOnBranchLines" />
+
+        <TextView
+            android:id="@+id/lblRecMinRadOnMainLines"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_curve_on_main_lines"
+            app:layout_constraintStart_toStartOf="@+id/lblRecMinRadOnBranchLines"
+            app:layout_constraintTop_toBottomOf="@+id/lblRecMinRadOnBranchLines" />
+
+        <TextView
+            android:id="@+id/txtRecMinRadOnMainLines"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRecMinRadOnBranchLines"
+            app:layout_constraintTop_toTopOf="@+id/lblRecMinRadOnMainLines" />
+
+        <TextView
+            android:id="@+id/lblRecMinOnMainLinesMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblRecMinOnBranchLinesMm"
+            app:layout_constraintTop_toTopOf="@+id/txtRecMinRadOnMainLines" />
+
+        <TextView
+            android:id="@+id/lblComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_curve_comment"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/lblRecMinOnMainLinesMm"
+            app:layout_constraintStart_toStartOf="@+id/lblGuidingRailsMinDistance"
+            app:layout_constraintTop_toBottomOf="@+id/lblRecMinRadOnMainLines" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_recommended_minimum_radius"
+            app:layout_constraintStart_toStartOf="@+id/lblGuidingRailsMinDistance"
+            app:layout_constraintTop_toBottomOf="@+id/lblGuidingRailsMinDistance" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

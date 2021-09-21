@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_gauge">
+
+    <fragment
+        android:id="@+id/nav_gauge"
+        android:name="eu.highball.traincalc.ui.GaugeFragment"
+        android:label="@string/title_gauge"
+        tools:layout="@layout/fragment_gauge" >
+        <action
+            android:id="@+id/action_nav_gauge_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_guiding_rails"
+        android:name="eu.highball.traincalc.ui.GuidingRailsFragment"
+        android:label="@string/menu_guiding_rails"
+        tools:layout="@layout/fragment_guiding_rails" >
+        <action
+            android:id="@+id/action_nav_guiding_rails_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scaleSelectorFragment"
+        android:name="eu.highball.traincalc.ui.ScaleSelectorFragment"
+        android:label="@string/title_scales"
+        tools:layout="@layout/fragment_scale_selector" />
+    <fragment
+        android:id="@+id/nav_curve_radius"
+        android:name="eu.highball.traincalc.ui.CurveRadiusFragment"
+        android:label="Curve radius (r)" >
+        <action
+            android:id="@+id/action_curveRadiusFragment_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_cant"
+        android:name="eu.highball.traincalc.ui.CantFragment"
+        android:label="@string/menu_cant" >
+        <action
+            android:id="@+id/action_cantFragment_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_track_distance"
+        android:name="eu.highball.traincalc.ui.TrackDistanceFragment"
+        android:label="@string/title_track_distance">
+        <action
+            android:id="@+id/action_trackDistanceFragment_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_overhead"
+        android:name="eu.highball.traincalc.ui.OverheadFragment"
+        android:label="@string/title_overhead_wire_position"
+        tools:layout="@layout/fragment_overhead" >
+        <action
+            android:id="@+id/action_overheadFragment_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_rail_height"
+        android:name="eu.highball.traincalc.ui.RailHeightFragment"
+        android:label="@string/title_rail_height"
+        tools:layout="@layout/fragment_rail_height" >
+        <action
+            android:id="@+id/action_railHeightFragment_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_clearance"
+        android:name="eu.highball.traincalc.ui.ClearanceFragment"
+        android:label="@string/title_clearance"
+        tools:layout="@layout/fragment_clearance" >
+        <action
+            android:id="@+id/action_clearanceFragment_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_trackbed"
+        android:name="eu.highball.traincalc.ui.TrackbedFragment"
+        android:label="@string/title_fragment_trackbed"
+        tools:layout="@layout/fragment_trackbed" >
+        <action
+            android:id="@+id/action_trackbedFragment_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_dcc_color"
+        android:name="eu.highball.traincalc.ui.DccColorsFragment"
+        android:label="@string/title_dcc_wire_colors"
+        tools:layout="@layout/fragment_dcc_colors" />
+</navigation>

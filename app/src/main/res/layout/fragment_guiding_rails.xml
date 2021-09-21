@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.GuidingRailsFragment">
+
+    <TextView
+        android:id="@+id/lblGuidingRailsMinDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_guiding_rails_min_distance"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/txtGaugeNemGauge"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="bottom"
+        android:text="---"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/btnScale" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_nem_gauge"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGaugeNemGauge"
+        app:layout_constraintStart_toStartOf="@+id/tvGaugeScale" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginEnd="18dp"
+        android:gravity="bottom"
+        android:text="mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+
+    <TextView
+        android:id="@+id/txtGuidingRails"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="bottom"
+        android:text="---"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtGaugeNemGauge"
+        app:layout_constraintTop_toTopOf="@+id/lblGuidingRailsMinDistance" />
+
+    <TextView
+        android:id="@+id/lblGuidingRailsMinDistanceMm"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginEnd="18dp"
+        android:gravity="bottom"
+        android:text="mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lblGuidingRailsMinDistance" />
+
+
+
+    <TextView
+        android:id="@+id/tvGaugeScale"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_scale"
+        app:layout_constraintBottom_toBottomOf="@+id/btnScale"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <eu.highball.traincalc.ui.ScaleSelectorButton
+        android:id="@+id/btnScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/txtGaugeNemGauge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:name="--"
+        app:norm="---"
+        app:scale="1:--" />
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblGuidingRailsMinDistance">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="210dp"
+            android:layout_height="280dp"
+            android:contentDescription="Gauge Image"
+            android:src="@drawable/guiding_rails"
+            app:srcCompat="@drawable/guiding_rails" />
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

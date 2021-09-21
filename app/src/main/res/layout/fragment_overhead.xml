@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TrackDistanceFragment">
+
+        <TextView
+            android:id="@+id/tvGaugeScale"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_scale"
+            app:layout_constraintBottom_toBottomOf="@+id/btnScale"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <eu.highball.traincalc.ui.ScaleSelectorButton
+            android:id="@+id/btnScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/txtNemGauge"
+            app:layout_constraintTop_toTopOf="parent"
+            app:name="--"
+            app:norm="---"
+            app:scale="1:--" />
+
+        <TextView
+            android:id="@+id/lblNemGauge"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_nem_gauge"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNemGauge"
+            app:layout_constraintStart_toStartOf="@+id/tvGaugeScale" />
+
+        <TextView
+            android:id="@+id/txtNemGauge"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/lblNemGaugeMm"
+            app:layout_constraintTop_toBottomOf="@+id/btnScale" />
+
+        <TextView
+            android:id="@+id/lblNemGaugeMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="18dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblNemGauge" />
+
+
+        <TextView
+            android:id="@+id/lblMaxHorizDeflection"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_max_horiz_deflection"
+            app:layout_constraintStart_toStartOf="@+id/lblNemGauge"
+            app:layout_constraintTop_toTopOf="@+id/txtMaxHorizDeflection" />
+
+        <TextView
+            android:id="@+id/txtMaxHorizDeflection"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtNemGauge"
+            app:layout_constraintTop_toBottomOf="@+id/txtNemGauge" />
+
+
+        <TextView
+            android:id="@+id/lblMaxHorizDeflectionMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblNemGaugeMm"
+            app:layout_constraintTop_toTopOf="@+id/txtMaxHorizDeflection" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_overhead_height"
+            app:layout_constraintStart_toStartOf="@+id/lblMaxHorizDeflection"
+            app:layout_constraintTop_toBottomOf="@+id/lblMaxHorizDeflection" />
+
+
+        <TextView
+            android:id="@+id/lblOverheadHeightHighest"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="36dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_overhead_height_highest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtOverheadHeightHighest" />
+
+        <TextView
+            android:id="@+id/txtOverheadHeightHighest"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtMaxHorizDeflection"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <TextView
+            android:id="@+id/lblOverheadHeightHighestMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblNemGaugeMm"
+            app:layout_constraintTop_toTopOf="@+id/txtOverheadHeightHighest" />
+
+
+        <TextView
+            android:id="@+id/lblOverheadHeightNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="36dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_overhead_height_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtOverheadHeightNormal" />
+
+        <TextView
+            android:id="@+id/txtOverheadHeightNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtMaxHorizDeflection"
+            app:layout_constraintTop_toBottomOf="@+id/txtOverheadHeightHighest" />
+
+        <TextView
+            android:id="@+id/lblOverheadHeightNormalMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblNemGaugeMm"
+            app:layout_constraintTop_toTopOf="@+id/txtOverheadHeightNormal" />
+
+
+        <TextView
+            android:id="@+id/lblOverheadHeightLowest"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="36dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_overhead_height_lowest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtOverheadHeightLowest" />
+
+        <TextView
+            android:id="@+id/txtOverheadHeightLowest"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtMaxHorizDeflection"
+            app:layout_constraintTop_toBottomOf="@+id/txtOverheadHeightNormal" />
+
+        <TextView
+            android:id="@+id/lblOverheadHeightLowestMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblNemGaugeMm"
+            app:layout_constraintTop_toTopOf="@+id/txtOverheadHeightLowest" />
+
+
+        <TextView
+            android:id="@+id/lblDistanceOfMasts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_overhead_distance_of_masts"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/lblOverheadHeightLowest" />
+
+        <TextView
+            android:id="@+id/lblOverheadMastRadius"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_overhead_curve_radius"
+            app:layout_constraintStart_toStartOf="@+id/lblOverheadHeightLowest"
+            app:layout_constraintTop_toBottomOf="@+id/lblDistanceOfMasts" />
+
+        <EditText
+            android:id="@+id/etnOverheadMastRadius"
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtOverheadHeightLowest"
+            app:layout_constraintTop_toTopOf="@+id/lblOverheadMastRadius" />
+
+        <TextView
+            android:id="@+id/lblOverheadMastRadiusMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblOverheadHeightLowestMm"
+            app:layout_constraintTop_toTopOf="@+id/lblOverheadMastRadius" />
+
+
+
+        <TextView
+            android:id="@+id/lblMastDistanceInCurves"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_overhead_distance"
+            app:layout_constraintStart_toStartOf="@+id/lblOverheadMastRadius"
+            app:layout_constraintTop_toBottomOf="@+id/lblOverheadMastRadius" />
+
+        <TextView
+            android:id="@+id/txtMastDistanceInCurves"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/etnOverheadMastRadius"
+            app:layout_constraintTop_toTopOf="@+id/lblMastDistanceInCurves" />
+
+
+        <TextView
+            android:id="@+id/lblMastDistanceInCurvesMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="@+id/lblOverheadMastRadiusMm"
+            app:layout_constraintTop_toTopOf="@+id/lblMastDistanceInCurves" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMastDistanceInCurves">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="210dp"
+                android:layout_height="280dp"
+                android:contentDescription="Gauge Image"
+                android:src="@drawable/img_overhead"
+                app:srcCompat="@drawable/img_overhead" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

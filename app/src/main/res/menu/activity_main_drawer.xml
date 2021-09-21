@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_gauge"
+            android:icon="@drawable/ic_gauge_av"
+            android:title="@string/menu_gauge" />
+        <item
+            android:id="@+id/nav_guiding_rails"
+            android:icon="@drawable/ic_guide_av"
+            android:title="@string/menu_guiding_rails" />
+        <item
+            android:id="@+id/nav_curve_radius"
+            android:icon="@drawable/ic_curve_av"
+            android:title="@string/menu_curve_radius" />
+        <item
+            android:id="@+id/nav_cant"
+            android:icon="@drawable/ic_cant_av"
+            android:title="@string/menu_cant_in_curves" />
+        <item
+            android:id="@+id/nav_track_distance"
+            android:icon="@drawable/ic_tdist_av"
+            android:title="@string/menu_track_distance" />
+        <item
+            android:id="@+id/nav_overhead"
+            android:icon="@drawable/ic_overhead_av"
+            android:title="@string/menu_overhead_wire_position" />
+        <item
+            android:id="@+id/nav_rail_height"
+            android:icon="@drawable/ic_code_av"
+            android:title="@string/menu_rail_height" />
+        <item
+            android:id="@+id/nav_clearance"
+            android:icon="@drawable/ic_clearance_av"
+            android:title="@string/menu_clearance" />
+        <item
+            android:id="@+id/nav_trackbed"
+            android:icon="@drawable/ic_trackbed_av"
+            android:title="@string/menu_trackbed" />
+        <item
+            android:id="@+id/nav_dcc_color"
+            android:icon="@drawable/ic_dcc_av"
+            android:title="@string/menu_dcc_wire_colors" />
+    </group>
+</menu>

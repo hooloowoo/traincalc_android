@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TrainCalc" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/hb_lgray</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/hb_lgray</item>
+        <item name="colorSecondaryVariant">@color/hb_lgray</item>
+        <item name="colorOnSecondary">@color/hb_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.TrainCalc.Main">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/hb_gray</item>
+        <item name="android:background">@color/white</item>
+
+    </style>
+
+    <style name="Theme.TrainCalc.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" >
+        <item name="android:textColorPrimary">@color/hb_gray</item>
+        <item name="android:textColor">@color/hb_gray</item>
+        <item name="elevation">0dp</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Theme.TrainCalc.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="android:textColor">@color/hb_gray</item>
+
+    </style>
+
+
+
+</resources>

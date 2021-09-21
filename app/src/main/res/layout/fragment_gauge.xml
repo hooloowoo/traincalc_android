@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.GaugeFragment">
+
+    <TextView
+        android:id="@+id/txtGaugeNemGauge"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:text="---"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/etnGaugeScaledGauge"
+        app:layout_constraintTop_toBottomOf="@+id/etnGaugeScaledGauge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:labelFor="@id/etnGaugeProtoGauge"
+        android:text="@string/gauge_proto_gauge_1_1"
+        app:layout_constraintStart_toStartOf="@+id/tvGaugeScale"
+        app:layout_constraintTop_toBottomOf="@+id/tvGaugeScale" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:labelFor="@id/etnGaugeScaledGauge"
+        android:text="@string/label_gauge_scaled_gauge"
+        app:layout_constraintBottom_toBottomOf="@+id/etnGaugeScaledGauge"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_nem_gauge"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGaugeNemGauge"
+        app:layout_constraintStart_toStartOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="bottom"
+        android:text="mm"
+        app:layout_constraintBottom_toBottomOf="@+id/etnGaugeScaledGauge"
+        app:layout_constraintEnd_toEndOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginEnd="18dp"
+        android:gravity="bottom"
+        android:text="mm"
+        app:layout_constraintBottom_toBottomOf="@+id/etnGaugeProtoGauge"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="bottom"
+        android:text="mm"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tvGaugeScale"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_scale"
+        app:layout_constraintBottom_toBottomOf="@+id/btnScale"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <eu.highball.traincalc.ui.ScaleSelectorButton
+        android:id="@+id/btnScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/etnGaugeProtoGauge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:name="TT"
+        app:norm="---"
+        app:scale="1:--" />
+
+    <EditText
+        android:id="@+id/etnGaugeProtoGauge"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/etnGaugeScaledGauge"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/etnGaugeProtoGauge" />
+
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="210dp"
+            android:layout_height="270dp"
+            android:contentDescription="Gauge Image"
+            android:src="@drawable/gauge"
+            app:srcCompat="@drawable/gauge" />
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

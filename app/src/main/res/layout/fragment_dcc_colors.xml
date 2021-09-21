@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.DccColorsFragment">
+
+
+        <TextView
+            android:id="@+id/lblRedLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:background="@color/red"
+            android:gravity="center_vertical"
+            android:text="@string/wire_red"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblRedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_red_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblRedLine"
+            app:layout_constraintTop_toTopOf="@+id/lblRedLine" />
+
+
+        <TextView
+            android:id="@+id/lblBlackLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/black"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_black"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblRedLine"
+            app:layout_constraintTop_toBottomOf="@id/lblRedLine" />
+
+        <TextView
+            android:id="@+id/lblBlackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_black_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblBlackLine"
+            app:layout_constraintTop_toTopOf="@+id/lblBlackLine" />
+
+
+        <TextView
+            android:id="@+id/lblOrangeLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/orange"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_orange"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblBlackLine"
+            app:layout_constraintTop_toBottomOf="@id/lblBlackLine" />
+
+        <TextView
+            android:id="@+id/lblOrangeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_orange_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblOrangeLine"
+            app:layout_constraintTop_toTopOf="@+id/lblOrangeLine" />
+
+        <TextView
+            android:id="@+id/lblGrayLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_gray"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblOrangeLine"
+            app:layout_constraintTop_toBottomOf="@id/lblOrangeLine" />
+
+        <TextView
+            android:id="@+id/lblGrayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_gray_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblGrayLine"
+            app:layout_constraintTop_toTopOf="@+id/lblGrayLine" />
+
+        <TextView
+            android:id="@+id/lblWhiteLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_white"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblGrayLine"
+            app:layout_constraintTop_toBottomOf="@id/lblGrayLine" />
+
+        <TextView
+            android:id="@+id/lblWhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_white_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblWhiteLine"
+            app:layout_constraintTop_toTopOf="@+id/lblWhiteLine" />
+
+
+        <TextView
+            android:id="@+id/lblYellowLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_yellow"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblWhiteLine"
+            app:layout_constraintTop_toBottomOf="@id/lblWhiteLine" />
+
+
+        <TextView
+            android:id="@+id/lblYellowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_yellow_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblYellowLine"
+            app:layout_constraintTop_toTopOf="@+id/lblYellowLine" />
+
+
+        <TextView
+            android:id="@+id/lblBlueLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_blue"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblYellowLine"
+            app:layout_constraintTop_toBottomOf="@id/lblYellowLine" />
+
+
+        <TextView
+            android:id="@+id/lblBlueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_blue_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblBlueLine"
+            app:layout_constraintTop_toTopOf="@+id/lblBlueLine" />
+
+        <TextView
+            android:id="@+id/lblGreenLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/green"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_green"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblBlueLine"
+            app:layout_constraintTop_toBottomOf="@id/lblBlueLine" />
+
+
+        <TextView
+            android:id="@+id/lblGreenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_green_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblGreenLine"
+            app:layout_constraintTop_toTopOf="@+id/lblGreenLine" />
+
+        <TextView
+            android:id="@+id/lblVioletLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/violet"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_violet"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblGreenLine"
+            app:layout_constraintTop_toBottomOf="@id/lblGreenLine" />
+
+
+        <TextView
+            android:id="@+id/lblVioletText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_violet_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblVioletLine"
+            app:layout_constraintTop_toTopOf="@+id/lblVioletLine" />
+
+        <TextView
+            android:id="@+id/lblBrownLine"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/brown"
+            android:gravity="center_vertical"
+            android:text="@string/dcc_wire_brown"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/lblVioletLine"
+            app:layout_constraintTop_toBottomOf="@id/lblVioletLine" />
+
+
+        <TextView
+            android:id="@+id/lblBrownText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="bottom"
+            android:text="@string/dcc_brown_wire_text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/lblBrownLine"
+            app:layout_constraintTop_toTopOf="@+id/lblBrownLine" />
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblBrownLine">
+
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="210dp"
+                        android:layout_height="280dp"
+                        android:contentDescription="Gauge Image"
+                        android:src="@drawable/img_dcc"
+                        app:srcCompat="@drawable/img_dcc" />
+                </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

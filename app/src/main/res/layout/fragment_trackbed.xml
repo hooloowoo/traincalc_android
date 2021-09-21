@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TrackDistanceFragment">
+
+        <TextView
+            android:id="@+id/tvGaugeScale"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_scale"
+            app:layout_constraintBottom_toBottomOf="@+id/btnScale"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <eu.highball.traincalc.ui.ScaleSelectorButton
+            android:id="@+id/btnScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/txtNemGauge"
+            app:layout_constraintTop_toTopOf="parent"
+            app:name="--"
+            app:norm="---"
+            app:scale="1:--" />
+
+        <TextView
+            android:id="@+id/lblNemGauge"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_nem_gauge"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNemGauge"
+            app:layout_constraintStart_toStartOf="@+id/tvGaugeScale" />
+
+        <TextView
+            android:id="@+id/txtNemGauge"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:gravity="bottom"
+            android:text="---"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/lblNemGaugeMm"
+            app:layout_constraintTop_toBottomOf="@+id/btnScale" />
+
+        <TextView
+            android:id="@+id/lblNemGaugeMm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="18dp"
+            android:gravity="bottom"
+            android:text="mm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblNemGauge" />
+
+
+        <TextView
+            android:id="@+id/lblLetterT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="T"
+            app:layout_constraintStart_toStartOf="@+id/lblNemGauge"
+            app:layout_constraintTop_toBottomOf="@+id/lblNemGauge" />
+
+        <TextView
+            android:id="@+id/lblTopOfTheRails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/label_top_of_the_rails"
+            app:layout_constraintStart_toStartOf="@+id/lblLetterT"
+            app:layout_constraintTop_toTopOf="@+id/lblLetterT"
+            tools:layout_editor_absoluteY="150dp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/layoutNormal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLetterT"
+                    tools:context=".ui.TrackDistanceFragment">
+
+                    <TextView
+                        android:id="@+id/lblLetterAN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:text="a"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtANVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterAN"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterAN" />
+
+                    <TextView
+                        android:id="@+id/lblANmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtANVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterAN" />
+
+
+                    <TextView
+                        android:id="@+id/lblLetterBN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="b"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.53"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterAN" />
+
+                    <TextView
+                        android:id="@+id/txtBNVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterBN"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterBN" />
+
+                    <TextView
+                        android:id="@+id/lblBNmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtBNVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterBN" />
+
+                    <TextView
+                        android:id="@+id/lblLetterCN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="c"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterAN"
+                        app:layout_constraintTop_toBottomOf="@+id/lblLetterAN" />
+
+                    <TextView
+                        android:id="@+id/txtCNVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterCN"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterCN" />
+
+                    <TextView
+                        android:id="@+id/lblCNmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtCNVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterCN" />
+
+                    <TextView
+                        android:id="@+id/lblLetterDN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="d"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.53"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterCN" />
+
+                    <TextView
+                        android:id="@+id/txtDNVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterDN"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterDN" />
+
+                    <TextView
+                        android:id="@+id/lblDNmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtDNVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterDN" />
+
+                    <TextView
+                        android:id="@+id/lblLetterEN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="e"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterCN"
+                        app:layout_constraintTop_toBottomOf="@+id/lblLetterCN" />
+
+                    <TextView
+                        android:id="@+id/txtENVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterEN"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterEN" />
+
+                    <TextView
+                        android:id="@+id/lblENmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtENVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterEN" />
+
+                    <TextView
+                        android:id="@+id/lblLetterFN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="f"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.53"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterEN" />
+
+                    <TextView
+                        android:id="@+id/txtFNVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterFN"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterFN" />
+
+                    <TextView
+                        android:id="@+id/lblFNmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtFNVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterFN" />
+
+
+
+                    <TextView
+                        android:id="@+id/lblLetterHN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="h"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterEN"
+                        app:layout_constraintTop_toBottomOf="@+id/lblLetterEN" />
+
+                    <TextView
+                        android:id="@+id/txtHNVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterHN"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterHN" />
+
+                    <TextView
+                        android:id="@+id/lblHNmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtHNVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterHN" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblLetterHN">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:contentDescription="Gauge Image"
+                            android:src="@drawable/img_trackbed_r"
+                            app:srcCompat="@drawable/img_trackbed_r" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/layoutNarrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLetterT"
+                    tools:context=".ui.TrackDistanceFragment">
+
+                    <TextView
+                        android:id="@+id/lblLetterAn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:text="a"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtAnVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterAn"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterAn" />
+
+                    <TextView
+                        android:id="@+id/lblAnmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtAnVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterAn" />
+
+
+                    <TextView
+                        android:id="@+id/lblLetterBn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="b"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.53"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterAn" />
+
+                    <TextView
+                        android:id="@+id/txtBnVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterBn"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterBn" />
+
+                    <TextView
+                        android:id="@+id/lblBnmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtBnVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterBn" />
+
+                    <TextView
+                        android:id="@+id/lblLetterCn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="c"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterAn"
+                        app:layout_constraintTop_toBottomOf="@+id/lblLetterAn" />
+
+                    <TextView
+                        android:id="@+id/txtCnVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterCn"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterCn" />
+
+                    <TextView
+                        android:id="@+id/lblCnmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtCnVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterCn" />
+
+                    <TextView
+                        android:id="@+id/lblLetterKn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="k"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.53"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterCn" />
+
+                    <TextView
+                        android:id="@+id/txtKnVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterKn"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterKn" />
+
+                    <TextView
+                        android:id="@+id/lblKnmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtKnVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterKn" />
+
+                    <TextView
+                        android:id="@+id/lblLetterFn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="f"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterCn"
+                        app:layout_constraintTop_toBottomOf="@+id/lblLetterCn" />
+
+                    <TextView
+                        android:id="@+id/txtFnVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterFn"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterFn" />
+
+                    <TextView
+                        android:id="@+id/lblFnmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtFnVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterFn" />
+
+                    <TextView
+                        android:id="@+id/lblLetterHn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="h"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.53"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterFn" />
+
+                    <TextView
+                        android:id="@+id/txtHnVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="---"
+                        app:layout_constraintStart_toStartOf="@+id/lblLetterHn"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterHn" />
+
+                    <TextView
+                        android:id="@+id/lblHnmm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="mm"
+                        app:layout_constraintStart_toEndOf="@+id/txtHnVal"
+                        app:layout_constraintTop_toTopOf="@+id/lblLetterHn" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewNarrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblLetterHn">
+
+                        <ImageView
+                            android:id="@+id/ivNarrowClearance"
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:contentDescription="Gauge Image"
+                            android:src="@drawable/img_trackbed"
+                            app:srcCompat="@drawable/img_trackbed" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

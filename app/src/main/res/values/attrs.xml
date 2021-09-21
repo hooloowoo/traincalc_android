@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr format="string" name="name"/>
+        <attr format="string" name="scale"/>
+        <attr format="string" name="norm"/>
+        <attr format="reference" name="image"/>
+    </declare-styleable>
+</resources>
