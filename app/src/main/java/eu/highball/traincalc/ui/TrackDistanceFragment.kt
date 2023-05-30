@@ -31,7 +31,6 @@ class TrackDistanceFragment : Fragment() {
             Navigation.findNavController(requireView()).navigate(R.id.action_trackDistanceFragment_to_scaleSelectorFragment)
         }
 
-
         binding.txtTrackDistanceAtStations.text = df.format(ScaleDescriptor.selectedScale.trackDistStation)
         binding.txtTrackDistanceOnLines.text = df.format(ScaleDescriptor.selectedScale.trackDistLine)
 
