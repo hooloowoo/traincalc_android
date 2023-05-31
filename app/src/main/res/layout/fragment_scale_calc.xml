@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.GaugeFragment">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:labelFor="@id/etnProtoSize"
+            android:text="@string/gauge_proto_size_1_1"
+            app:layout_constraintStart_toStartOf="@+id/tvGaugeScale"
+            app:layout_constraintTop_toBottomOf="@+id/tvGaugeScale" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:labelFor="@id/etnScale"
+            android:text="@string/label_scale"
+            app:layout_constraintBottom_toBottomOf="@+id/etnScale"
+            app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:text="1:"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/etnScale"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/tvGaugeScale"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_scale"
+            app:layout_constraintBottom_toBottomOf="@+id/btnScale"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <eu.highball.traincalc.ui.ScaleSelectorButton
+            android:id="@+id/btnScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/spnProtoUnit"
+            app:layout_constraintTop_toTopOf="parent"
+            app:name="TT"
+            app:norm="---"
+            app:scale="1:--" />
+
+        <EditText
+            android:id="@+id/etnProtoSize"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@+id/spnProtoUnit"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+
+        <EditText
+            android:id="@+id/etnModelSize"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@+id/spnProtoUnit"
+            app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+        <EditText
+            android:id="@+id/etnScale"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/etnProtoSize"
+            app:layout_constraintTop_toBottomOf="@+id/etnProtoSize" />
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="210dp"
+                android:layout_height="270dp"
+                android:contentDescription="Image"
+                android:src="@drawable/gauge"
+                app:srcCompat="@drawable/gauge" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Spinner
+            android:id="@+id/spnProtoUnit"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/spinner_border"
+            app:layout_constraintBottom_toBottomOf="@+id/etnProtoSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etnProtoSize" />
+
+        <Spinner
+            android:id="@+id/spnModelUnit"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="@drawable/spinner_border"
+            app:layout_constraintBottom_toBottomOf="@+id/etnModelSize"
+            app:layout_constraintEnd_toEndOf="@+id/spnProtoUnit"
+            app:layout_constraintTop_toTopOf="@+id/etnModelSize"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center_vertical"
+            android:labelFor="@id/etnScale"
+            android:text="@string/label_scaled_size"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

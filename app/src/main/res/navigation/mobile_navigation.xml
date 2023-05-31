@@ -3,7 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_gauge">
+    app:startDestination="@+id/nav_scale_calc">
+
+    <fragment
+        android:id="@+id/nav_scale_calc"
+        android:name="eu.highball.traincalc.ui.ScaleCalcFragment"
+        android:label="@string/title_size_calc"
+        tools:layout="@layout/fragment_gauge" >
+        <action
+            android:id="@+id/action_nav_gauge_to_scaleSelectorFragment"
+            app:destination="@id/scaleSelectorFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gauge"
@@ -94,4 +104,9 @@
         android:name="eu.highball.traincalc.ui.DccColorsFragment"
         android:label="@string/title_dcc_wire_colors"
         tools:layout="@layout/fragment_dcc_colors" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="eu.highball.traincalc.ui.SettingsFragment"
+        android:label="@string/action_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

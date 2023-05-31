@@ -6,6 +6,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_scale_calc"
+            android:icon="@drawable/ic_gauge_av"
+            android:title="@string/menu_size_calc" />
+        <item
             android:id="@+id/nav_gauge"
             android:icon="@drawable/ic_gauge_av"
             android:title="@string/menu_gauge" />
@@ -45,5 +49,9 @@
             android:id="@+id/nav_dcc_color"
             android:icon="@drawable/ic_dcc_av"
             android:title="@string/menu_dcc_wire_colors" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_dcc_av"
+            android:title="@string/action_settings" />
     </group>
 </menu>

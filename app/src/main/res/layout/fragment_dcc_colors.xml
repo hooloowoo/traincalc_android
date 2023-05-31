@@ -30,7 +30,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_red_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblRedLine"
             app:layout_constraintTop_toTopOf="@+id/lblRedLine" />
 
@@ -55,7 +54,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_black_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblBlackLine"
             app:layout_constraintTop_toTopOf="@+id/lblBlackLine" />
 
@@ -80,7 +78,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_orange_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblOrangeLine"
             app:layout_constraintTop_toTopOf="@+id/lblOrangeLine" />
 
@@ -104,7 +101,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_gray_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblGrayLine"
             app:layout_constraintTop_toTopOf="@+id/lblGrayLine" />
 
@@ -113,7 +109,7 @@
             android:layout_width="64dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/edit_text_border"
+            android:background="@color/white"
             android:gravity="center_vertical"
             android:text="@string/dcc_wire_white"
             android:textColor="@color/black"
@@ -128,7 +124,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_white_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblWhiteLine"
             app:layout_constraintTop_toTopOf="@+id/lblWhiteLine" />
 
@@ -154,7 +149,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_yellow_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblYellowLine"
             app:layout_constraintTop_toTopOf="@+id/lblYellowLine" />
 
@@ -180,7 +174,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_blue_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblBlueLine"
             app:layout_constraintTop_toTopOf="@+id/lblBlueLine" />
 
@@ -205,7 +198,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_green_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblGreenLine"
             app:layout_constraintTop_toTopOf="@+id/lblGreenLine" />
 
@@ -230,7 +222,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_violet_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblVioletLine"
             app:layout_constraintTop_toTopOf="@+id/lblVioletLine" />
 
@@ -255,7 +246,6 @@
             android:layout_marginStart="4dp"
             android:gravity="bottom"
             android:text="@string/dcc_brown_wire_text"
-            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/lblBrownLine"
             app:layout_constraintTop_toTopOf="@+id/lblBrownLine" />
 

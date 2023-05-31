@@ -28,12 +28,6 @@ class ScaleSelectorButton @JvmOverloads constructor(context: Context, attrs: Att
             val txtName = ta.getString(R.styleable.CustomView_name)
             val txtScale = ta.getString(R.styleable.CustomView_scale)
             val txtNorm = ta.getString(R.styleable.CustomView_norm)
-/*            val drawableId = ta.getResourceId(R.styleable.CustomView_image, 0)
-            if (drawableId != 0) {
-                val drawable = AppCompatResources.getDrawable(context, drawableId)
-                val ivImage : ImageView = findViewById(R.id.image_thumb)
-                ivImage.setImageDrawable(drawable)
-            }*/
             val tvName : TextView = findViewById(R.id.txtScaleName)
             tvName.text = txtName
 
@@ -49,26 +43,30 @@ class ScaleSelectorButton @JvmOverloads constructor(context: Context, attrs: Att
         }
     }
 
-    fun setParams(descr : ScaleDescriptor ) {
-        val color = Color.parseColor(descr.color);
-        val tvName : TextView = findViewById(R.id.txtScaleName)
-        tvName.text = descr.name
-        tvName.setTextColor(color)
-        val tvScale : TextView = findViewById(R.id.txtScaleScale)
-        tvScale.text = descr.scaleString()
-        tvScale.setTextColor(color)
-        val tvNorm : TextView = findViewById(R.id.txtScaleNorm)
-        tvNorm.text = descr.standard
-        tvNorm.setTextColor(color)
-
-
-
+    fun setParams(descr : ScaleDescriptor? ) {
+        if (descr === null) {
+            val color = Color.parseColor("#808080");
+            val tvName: TextView = findViewById(R.id.txtScaleName)
+            tvName.text = "---"
+            tvName.setTextColor(color)
+            val tvScale: TextView = findViewById(R.id.txtScaleScale)
+            tvScale.text = "---"
+            tvScale.setTextColor(color)
+            val tvNorm: TextView = findViewById(R.id.txtScaleNorm)
+            tvNorm.text = "---"
+            tvNorm.setTextColor(color)
+        } else {
+            val color = Color.parseColor(descr.color);
+            val tvName: TextView = findViewById(R.id.txtScaleName)
+            tvName.text = descr.name
+            tvName.setTextColor(color)
+            val tvScale: TextView = findViewById(R.id.txtScaleScale)
+            tvScale.text = descr.scaleString()
+            tvScale.setTextColor(color)
+            val tvNorm: TextView = findViewById(R.id.txtScaleNorm)
+            tvNorm.text = descr.standard
+            tvNorm.setTextColor(color)
+        }
     }
 
-
-    fun setName(name : String ) {
-        val tvName : TextView = findViewById(R.id.txtScaleName)
-        tvName.text = name
-
-    }
 }

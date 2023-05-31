@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">TrainCalc</string>
+    <string name="title_size_calc">Size Calculator</string>
+    <string name="menu_size_calc">Size Calculator</string>
     <string name="action_settings">Beállítások</string>
     <string name="menu_gauge">Nyomtávok</string>
     <string name="title_scales">Építési nagyságok</string>
@@ -72,5 +74,8 @@
     <string name="label_track_dist_in_curves">ívben</string>
     <string name="label_track_dist_on_lines">nyílt vonalon</string>
     <string name="label_overhead_distance">távolság</string>
+    <string name="label_scaled_size">Scaled size</string>
+
+    <string name="gauge_proto_size_1_1">Proto size (1:1)</string>
 
 </resources>

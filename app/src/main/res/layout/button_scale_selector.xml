@@ -9,13 +9,6 @@
     android:paddingEnd="10dp"
     android:paddingBottom="10dp">
 
-    <!--    <ImageView
-        android:id="@+id/image_thumb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="ContentDescription"
-        tools:src="@mipmap/ic_launcher" />-->
-
     <TextView
         android:id="@+id/txtScaleName"
         android:layout_width="wrap_content"
