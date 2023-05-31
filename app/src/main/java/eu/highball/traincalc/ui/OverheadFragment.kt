@@ -37,8 +37,6 @@ class OverheadFragment : Fragment() {
         binding.txtOverheadHeightNormal.text = df.format(getNormalPos())
         binding.txtOverheadHeightLowest.text = df.format(getLowPos())
 
-
-
         binding.etnOverheadMastRadius.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {
