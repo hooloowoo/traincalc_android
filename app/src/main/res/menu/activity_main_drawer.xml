@@ -10,6 +10,14 @@
             android:icon="@drawable/ic_gauge_av"
             android:title="@string/menu_size_calc" />
         <item
+            android:id="@+id/nav_dcc_color"
+            android:icon="@drawable/ic_dcc_av"
+            android:title="@string/menu_dcc_wire_colors" />
+        <item
+            android:id="@+id/nav_dcc_calc"
+            android:icon="@drawable/ic_dcc_av"
+            android:title="@string/label_dcc_calc" />
+        <item
             android:id="@+id/nav_gauge"
             android:icon="@drawable/ic_gauge_av"
             android:title="@string/menu_gauge" />
@@ -45,13 +53,5 @@
             android:id="@+id/nav_trackbed"
             android:icon="@drawable/ic_trackbed_av"
             android:title="@string/menu_trackbed" />
-        <item
-            android:id="@+id/nav_dcc_color"
-            android:icon="@drawable/ic_dcc_av"
-            android:title="@string/menu_dcc_wire_colors" />
-        <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_dcc_av"
-            android:title="@string/action_settings" />
     </group>
 </menu>

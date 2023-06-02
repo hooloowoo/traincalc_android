@@ -27,7 +27,7 @@
             android:layout_height="32dp"
             android:gravity="center_vertical"
             android:labelFor="@id/etnScale"
-            android:text="@string/label_scale"
+            android:text="@string/label_scale_ext"
             app:layout_constraintBottom_toBottomOf="@+id/etnScale"
             app:layout_constraintStart_toStartOf="@+id/textView3" />
 

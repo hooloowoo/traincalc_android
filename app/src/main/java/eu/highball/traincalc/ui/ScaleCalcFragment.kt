@@ -22,9 +22,12 @@ class ScaleCalcFragment : Fragment() {
     private var _binding: FragmentScaleCalcBinding? = null
 
     private val binding get() = _binding!!
+//    Imperial units will be shown when NMRA added
+//    private var courses = arrayOf("mm", "cm","m","km","inch","feet","yard","mile")
+//    private var weights : Array<Double> = arrayOf(1.0, 10.0,1000.0,1000000.0,25.4,304.8,914.4,1609340.0)
 
-    private var courses = arrayOf("mm", "cm","m","km","inch","feet","yard","mile")
-    private var weights : Array<Double> = arrayOf(1.0, 10.0,1000.0,1000000.0,25.4,304.8,914.4,1609340.0)
+    private var courses = arrayOf("mm", "cm","m","km")
+    private var weights : Array<Double> = arrayOf(1.0, 10.0,1000.0,1000000.0)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -79,7 +82,6 @@ class ScaleCalcFragment : Fragment() {
 
         binding.etnScale.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
-                println(" **************** BBBB " + binding.etnScale.text.toString())
                 if (binding.etnScale.hasFocus()) {
                     calcSize()
                     calcFromProto()

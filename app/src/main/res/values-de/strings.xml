@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TrainCalc</string>
-    <string name="title_size_calc">Size Calculator</string>
-    <string name="menu_size_calc">Size Calculator</string>
+    <string name="title_size_calc">Maßstabsrechner</string>
+    <string name="menu_size_calc">Maßstabsrechner</string>
     <string name="action_settings">Einstellungen</string>
     <string name="menu_gauge">Spurweiten</string>
     <string name="title_scales">Nenngröße</string>
@@ -74,7 +74,32 @@
     <string name="label_track_dist_in_curves">im Bogen</string>
     <string name="label_track_dist_on_lines">auf freier Strecke</string>
     <string name="label_overhead_distance">Abstand</string>
-    <string name="label_scaled_size">Scaled size</string>
+    <string name="label_scaled_size">Modell</string>
+    <string name="label_dcc_calc">Allgemeine DCC CV Register</string>
+    <string name="label_scale_ext">Maßstab</string>
+    <string name="gauge_proto_size_1_1">Vorbild (1:1)</string>
 
-    <string name="gauge_proto_size_1_1">Proto size (1:1)</string>
+
+    <string name="dcc_cv1_text">Hauptadresse</string>
+    <string name="dcc_cv2_text">Anfahrspannung</string>
+    <string name="dcc_cv3_text">Beschleunigungsrate</string>
+    <string name="dcc_cv4_text">Bremszeit</string>
+    <string name="dcc_cv5_text">Maximale Spannung</string>
+    <string name="dcc_cv6_text">Mittlere Spannung</string>
+    <string name="dcc_cv7_text">Versionsnummer</string>
+    <string name="dcc_cv8_text">Herstellerkennung</string>
+    <string name="dcc_cv9_text">PWM-Periode</string>
+    <string name="dcc_cv10_text">Regelungs-Cutout</string>
+    <string name="dcc_cv17_18_text">Erweiterte Adresse</string>
+    <string name="dcc_cv19_text">Verbundadresse</string>
+    <string name="dcc_cv21_text">Funktionen F1-F8 im Verbundbetrieb</string>
+    <string name="dcc_cv22_text">Funktionen FL-F9-F12 im Verbundbetrieb</string>
+    <string name="dcc_cv23_text">Beschleunigungsvariation</string>
+    <string name="dcc_cv24_text">Bremszeit Variation</string>
+    <string name="dcc_cv29_text">Grundeinstellungen</string>
+    <string name="dcc_cv33_46_text">Funktionszuordnung. FL, F1-F12</string>
+    <string name="dcc_cv67_94_text">Geschwindigkeitskennlinie</string>
+
+
+
 </resources>

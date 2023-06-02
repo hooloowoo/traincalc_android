@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_scale_calc,
+                R.id.nav_dcc_color,
+                R.id.nav_dcc_calc,
                 R.id.nav_gauge,
                 R.id.nav_guiding_rails,
                 R.id.nav_curve_radius,
@@ -43,9 +45,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_overhead,
                 R.id.nav_rail_height,
                 R.id.nav_clearance,
-                R.id.nav_trackbed,
-                R.id.nav_dcc_color,
-                R.id.nav_settings
+                R.id.nav_trackbed
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

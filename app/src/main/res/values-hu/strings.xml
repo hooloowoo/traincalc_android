@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TrainCalc</string>
-    <string name="title_size_calc">Size Calculator</string>
-    <string name="menu_size_calc">Size Calculator</string>
+    <string name="title_size_calc">Méretarány kalkulátor</string>
+    <string name="menu_size_calc">Méretarány kalkulátor</string>
     <string name="action_settings">Beállítások</string>
     <string name="menu_gauge">Nyomtávok</string>
     <string name="title_scales">Építési nagyságok</string>
@@ -74,8 +74,34 @@
     <string name="label_track_dist_in_curves">ívben</string>
     <string name="label_track_dist_on_lines">nyílt vonalon</string>
     <string name="label_overhead_distance">távolság</string>
-    <string name="label_scaled_size">Scaled size</string>
+    <string name="label_scaled_size">Modell</string>
+    <string name="label_dcc_calc">Ált. DCC regiszterek (CV)</string>
 
-    <string name="gauge_proto_size_1_1">Proto size (1:1)</string>
+    <string name="label_scale_ext">Méretarány</string>
+    <string name="gauge_proto_size_1_1">Eredeti (1:1)</string>
+
+
+    <string name="dcc_cv1_text">Elsődleges cím</string>
+    <string name="dcc_cv2_text">Indulási feszültség</string>
+    <string name="dcc_cv3_text">Gyorsulási ráta</string>
+    <string name="dcc_cv4_text">Fékezési ráta</string>
+    <string name="dcc_cv5_text">Maximális feszültség</string>
+    <string name="dcc_cv6_text">Középfeszültség</string>
+    <string name="dcc_cv7_text">Dekóder verzió</string>
+    <string name="dcc_cv8_text">Gyártóazonosító</string>
+    <string name="dcc_cv9_text">PWM periódus</string>
+    <string name="dcc_cv10_text">EMF Cutout</string>
+    <string name="dcc_cv17_18_text">Hosszú cím</string>
+    <string name="dcc_cv19_text">Consist cím</string>
+    <string name="dcc_cv21_text">F1-F8 funkciók consist módban</string>
+    <string name="dcc_cv22_text">FL-F9-F12 funkciók consist módban</string>
+    <string name="dcc_cv23_text">Gyorsulási ráta kiegészítés</string>
+    <string name="dcc_cv24_text">Fékezési ráta kiegészítés</string>
+    <string name="dcc_cv29_text">Alapbeállítások</string>
+    <string name="dcc_cv33_46_text">FL, F1-F12 funkció hozzárendelések</string>
+    <string name="dcc_cv67_94_text">Sebbeség táblázat</string>
+
+
+
 
 </resources>
